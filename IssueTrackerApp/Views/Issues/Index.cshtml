@@ -1,0 +1,101 @@
+﻿@model IEnumerable<IssueTrackerApp.Models.Issue>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.IssueName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Created)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Due)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Severity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsRepoducible)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reporter)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Responsible)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Supporting)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Customer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Product)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Team)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.IssueName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Created)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Due)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Severity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsRepoducible)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Reporter)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Responsible)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Supporting)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Customer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Product)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Team)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

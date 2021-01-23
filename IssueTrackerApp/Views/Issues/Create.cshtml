@@ -1,0 +1,88 @@
+﻿@model IssueTrackerApp.Models.Issue
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Issue</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="IssueName" class="control-label"></label>
+                <input asp-for="IssueName" class="form-control" />
+                <span asp-validation-for="IssueName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Created" class="control-label"></label>
+                <input asp-for="Created" class="form-control" />
+                <span asp-validation-for="Created" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Due" class="control-label"></label>
+                <input asp-for="Due" class="form-control" />
+                <span asp-validation-for="Due" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Status" class="control-label"></label>
+                <select asp-for="Status" class="form-control"></select>
+                <span asp-validation-for="Status" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Severity" class="control-label"></label>
+                <select asp-for="Severity" class="form-control"></select>
+                <span asp-validation-for="Severity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IsRepoducible" class="control-label"></label>
+                <select asp-for="IsRepoducible" class="form-control"></select>
+                <span asp-validation-for="IsRepoducible" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Reporter" class="control-label"></label>
+                <input asp-for="Reporter" class="form-control" />
+                <span asp-validation-for="Reporter" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Responsible" class="control-label"></label>
+                <input asp-for="Responsible" class="form-control" />
+                <span asp-validation-for="Responsible" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Supporting" class="control-label"></label>
+                <input asp-for="Supporting" class="form-control" />
+                <span asp-validation-for="Supporting" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Customer" class="control-label"></label>
+                <input asp-for="Customer" class="form-control" />
+                <span asp-validation-for="Customer" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Product" class="control-label"></label>
+                <input asp-for="Product" class="form-control" />
+                <span asp-validation-for="Product" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Team" class="control-label"></label>
+                <input asp-for="Team" class="form-control" />
+                <span asp-validation-for="Team" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
