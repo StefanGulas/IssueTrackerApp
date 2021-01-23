@@ -7,6 +7,10 @@ namespace IssueTrackerApp.Models
 {
     public class Issue
     {
+        public Issue()
+        {
+
+        }
         public int Id { get; set; }
         public string IssueName { get; set; }
         public DateTime Created { get; set; }
@@ -35,6 +39,15 @@ namespace IssueTrackerApp.Models
             Immer,
             Manchmal,
             Nie
+        }
+        public enum IssueCategory
+        {
+            UserInterface,
+            BusinessLogic,
+            Database,
+            Hardware,
+            Network,
+            Communication
         }
         public IssueIsRepoducible IsRepoducible { get; set; }
         public string Reporter { get; set; }
