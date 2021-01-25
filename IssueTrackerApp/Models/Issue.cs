@@ -5,16 +5,6 @@ using System.Threading.Tasks;
 
 namespace IssueTrackerApp.Models
 {
-    public class Issue
-    {
-        public Issue()
-        {
-
-        }
-        public int Id { get; set; }
-        public string IssueName { get; set; }
-        public DateTime Created { get; set; }
-        public DateTime Due { get; set; }
         public enum IssueStatus
         { 
             Offen,
@@ -24,7 +14,6 @@ namespace IssueTrackerApp.Models
             Angehalten,
             Erledigt
         }
-        public IssueStatus Status { get; set; }
         public enum IssueSeverity
         {
             ShowStopper,
@@ -33,7 +22,6 @@ namespace IssueTrackerApp.Models
             Unerheblich,
             SpäterErledigen
         }
-        public IssueSeverity Severity { get; set; }
         public enum IssueIsRepoducible
         {
             Immer,
@@ -49,6 +37,19 @@ namespace IssueTrackerApp.Models
             Network,
             Communication
         }
+
+    public class Issue
+    {
+        public Issue()
+        {
+
+        }
+        public int Id { get; set; }
+        public string IssueName { get; set; }
+        public DateTime Created { get; set; }
+        public DateTime Due { get; set; }
+        public IssueStatus Status { get; set; }
+        public IssueSeverity Severity { get; set; }
         public IssueIsRepoducible IsRepoducible { get; set; }
         public string Reporter { get; set; }
         public string Responsible { get; set; }
