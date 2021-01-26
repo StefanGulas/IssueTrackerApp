@@ -48,9 +48,12 @@ namespace IssueTrackerApp.Models
         public string IssueName { get; set; }
         public DateTime Created { get; set; }
         public DateTime Due { get; set; }
-        public IssueStatus Status { get; set; }
-        public IssueSeverity Severity { get; set; }
-        public IssueIsRepoducible IsRepoducible { get; set; }
+        //public IssueStatus Status { get; set; }
+        //public IssueSeverity Severity { get; set; }
+        //public IssueIsRepoducible IsRepoducible { get; set; }
+        public int Status { get; set; }
+        public int Severity { get; set; }
+        public int IsRepoducible { get; set; }
         public string Reporter { get; set; }
         public string Responsible { get; set; }
         public string Supporting { get; set; }
